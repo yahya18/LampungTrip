@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreen"
+    tools:context=".MainActivity">
+
+    <!--<Button
+        android:id="@+id/buttonkembali"
+        android:layout_width="30dp"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="47dp"
+        android:background="@color/colorGreen"
+        android:drawableBottom="@drawable/ic_clear_black_24dp" />
+       !-->
+
+    <Button
+        android:id="@+id/buttonfineplace"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/edittextstyle"
+        android:drawableTop="@drawable/ic_location_on_black_24dp"
+        android:text="Find Places"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="162dp" />
+
+    <Button
+        android:id="@+id/buttonmaps"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextstyle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="198dp"
+        android:drawableTop="@drawable/ic_map_black_24dp"
+        android:text="Maps"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="162dp" />
+
+    <Button
+        android:id="@+id/buttonfavorite"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/edittextstyle"
+        android:drawableTop="@drawable/ic_favorite_border_black_24dp"
+        android:text="Favorites"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="162dp" />
+
+
+    <Button
+        android:id="@+id/buttonabout"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="366dp"
+        android:background="@drawable/edittextstyle"
+        android:drawableTop="@drawable/ic_person_black_24dp"
+        android:text="About Us"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="162dp" />
+
+</RelativeLayout>
