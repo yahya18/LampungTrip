@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#4682B4</color>
+    <color name="colorPrimaryDark">#468</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorBlack">#030303</color>
     <color name="colorWhite">#ffffff</color>
@@ -12,5 +12,15 @@
     <color name="blue_grey_700">#455A64</color>
     <color name="blue_grey_800">#37474F</color>
     <color name="blue_grey_900">#263238</color>
+
+    <color name="colorlightgrayline">#EDEDED</color>
+    <color name="colorbrown">#A52A2A</color>
+    <color name="colorcadetblue">#5F9EAD</color>
+    <color name="colorchocolate">#D2691E </color>
+    <color name="colorlimegreen">#32CD32</color>
+    <color name="colordarkcoral">#FF7F50</color>
+    <color name="colorbackground">#FCFCFC</color>
+
+    <color name="golden">#FFFDD433</color>
 
 </resources>

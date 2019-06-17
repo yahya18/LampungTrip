@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "407752151945",
+    "firebase_url": "https://appwisata-1949d.firebaseio.com",
+    "project_id": "appwisata-1949d",
+    "storage_bucket": "appwisata-1949d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407752151945:android:9926e7dc79b85d9c",
+        "android_client_info": {
+          "package_name": "com.divine.appwisata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407752151945-djg5di1k175j9n532h39drag2s960mcm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.divine.appwisata",
+            "certificate_hash": "d6abc22351fba739455b240fe0eda59d1ad5d2bc"
+          }
+        },
+        {
+          "client_id": "407752151945-j906kk2l0htqnr28irjkmebcncb2cv74.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXNYB-c3POKWQdXGAZSAClkMGR5iUmVMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407752151945-j906kk2l0htqnr28irjkmebcncb2cv74.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

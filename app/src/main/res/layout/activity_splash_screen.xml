@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashScreenActivity">
+    tools:context=".view.SplashScreenActivity">
 
 
     <ImageView
@@ -23,9 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
-        android:progressTint="@color/colorGreen"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="416dp" />
+        android:layout_marginTop="60dp"
+        />
 
 </RelativeLayout>

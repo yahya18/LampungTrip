@@ -2,6 +2,7 @@ package com.divine.appwisata.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,35 +10,36 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.divine.appwisata.view.DetailActivity;
 import com.divine.appwisata.R;
 import com.divine.appwisata.response.WisataItem;
+import com.divine.appwisata.view.DetailActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class AdapterWisata extends RecyclerView.Adapter<AdapterWisata.MyViewHolder> {
+public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.MyViewHolder> {
     // Buat Global variable untuk manampung context
     Context context;
     List<WisataItem> wisata;
-    public AdapterWisata(Context context, List<WisataItem> data_wisata) {
+    public FavoriteAdapter(Context context, List<WisataItem> data_wisata) {
         // Inisialisasi
         this.context = context;
         this.wisata = data_wisata;
     }
 
+
+
+    @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        // Layout inflater
-        View view = LayoutInflater.from(context).inflate(R.layout.wisata_item, parent, false);
-
-        // Hubungkan dengan MyViewHolder
-        MyViewHolder holder = new MyViewHolder(view);
-        return holder;
+        View view;
+        LayoutInflater mInflater = LayoutInflater.from(context);
+        view = mInflater.inflate(R.layout.favorite_item,parent,false);
+        return new MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, final int position) {
+    public void onBindViewHolder(FavoriteAdapter.MyViewHolder holder, final int position) {
         // Set widget
         holder.judulWisata.setText(wisata.get(position).getNamaTempat());
         holder.subW.setText(wisata.get(position).getSubNama());

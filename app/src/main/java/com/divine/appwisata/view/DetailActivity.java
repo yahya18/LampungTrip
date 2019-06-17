@@ -1,4 +1,4 @@
-package com.divine.appwisata;
+package com.divine.appwisata.view;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -8,15 +8,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.divine.appwisata.R;
 import com.squareup.picasso.Picasso;
 
 public class DetailActivity extends AppCompatActivity {
 
     // Deklarasi
-    ImageView ivGambarBerita;
-   // TextView tvTglTerbit, tvPenulis;
+    ImageView gambarPoster;
+    TextView subW;
     WebView wvKontenBerita;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,9 +37,8 @@ public class DetailActivity extends AppCompatActivity {
         });
 
         // Inisialisasi
-        ivGambarBerita = (ImageView) findViewById(R.id.ivGambarBerita);
-    //    tvTglTerbit = (TextView) findViewById(R.id.tvTglTerbit);
-    //    tvPenulis = (TextView) findViewById(R.id.tvPenulis);
+        gambarPoster = (ImageView) findViewById(R.id.gambarPoster);
+        subW = (TextView) findViewById(R.id.subW);
         wvKontenBerita = (WebView) findViewById(R.id.wvKontenBerita);
 
         // Jalankan method tampil detail berita
@@ -54,11 +56,12 @@ public class DetailActivity extends AppCompatActivity {
         // Set judul actionbar / toolbar
         getSupportActionBar().setTitle(nama_tmpt);
 
-        // Set ke widget
-     //   tvPenulis.setText("Oleh : " + penulis_berita);
-     //   tvTglTerbit.setText(tanggal_berita);
+
         // Untuk gambar berita
-        Picasso.with(this).load(foto).into(ivGambarBerita);
+        Picasso.with(this).load(foto).into(gambarPoster);
+
+
+
         // Set isi berita sebagai html ke WebView
         wvKontenBerita.getSettings().setJavaScriptEnabled(true);
         wvKontenBerita.loadData(isi_ket, "text/html; charset=utf-8", "UTF-8");

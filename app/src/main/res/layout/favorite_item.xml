@@ -17,13 +17,13 @@
         app:cardCornerRadius="20dp">
 
         <ImageView
-            android:id="@+id/gambarPoster"
+            android:id="@+id/gambarPosterFav"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="fitXY"
             android:src="@mipmap/ic_launcher"/>
         <TextView
-            android:id="@+id/judulWisata"
+            android:id="@+id/judulWisataFav"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
@@ -40,7 +40,7 @@
             android:layout_marginBottom="10dp">
 
             <TextView
-                android:id="@+id/subW"
+                android:id="@+id/subWFav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="240dp"
@@ -49,6 +49,7 @@
                 />
 
         </LinearLayout>
+
 
     </android.support.v7.widget.CardView>
 </FrameLayout>

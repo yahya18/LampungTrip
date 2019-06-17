@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".DetailActivity">
+    tools:context=".view.DetailActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -25,7 +25,7 @@
 
             <!--TAMPILKAN GAMBAR-->
             <ImageView
-                android:id="@+id/ivGambarBerita"
+                android:id="@+id/gambarPoster"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@mipmap/ic_launcher"
@@ -41,6 +41,8 @@
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
+
+
 
     <include layout="@layout/content_detail" />
 

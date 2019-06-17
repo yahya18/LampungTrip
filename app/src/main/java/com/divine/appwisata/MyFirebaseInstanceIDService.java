@@ -1,31 +1,29 @@
 package com.divine.appwisata;
 
+import android.annotation.SuppressLint;
 import android.util.Log;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 
-/**
- * Created by putuguna on 20/06/16.
- */
+
 public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
     private static final String TAG = "MyFirebaseInstanceIDService";
 
+    @SuppressLint("LongLogTag")
     @Override
     public void onTokenRefresh() {
-        //super.onTokenRefresh();
+        // Get updated InstanceID token.
+        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+        Log.d(TAG, "Refreshed token: " + refreshedToken);
 
-        //getting registration token
-        String refreshToken = FirebaseInstanceId.getInstance().getToken();
-
-        //Displaying token in Logcat
-        Log.d("TAG", "Refreshed Token : " + refreshToken);
-
-        sendRegistrationToServer(refreshToken);
+        // If you want to send messages to this application instance or
+        // manage this apps subscriptions on the server side, send the
+        // Instance ID token to your app server.
+        sendRegistrationToServer(refreshedToken);
     }
 
-    private void sendRegistrationToServer(String token) {
-        //You can implement this method to store the token on your server
-        //Not required for current project
+    private void sendRegistrationToServer(String refreshedToken) {
+
     }
 }

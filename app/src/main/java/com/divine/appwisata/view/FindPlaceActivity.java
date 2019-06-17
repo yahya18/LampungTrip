@@ -1,4 +1,4 @@
-package com.divine.appwisata;
+package com.divine.appwisata.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.divine.appwisata.R;
 import com.divine.appwisata.adapter.AdapterWisata;
 import com.divine.appwisata.network.ApiServices;
 import com.divine.appwisata.network.InitRetrofit;
@@ -19,16 +20,17 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class finePlace extends AppCompatActivity {
+public class FindPlaceActivity extends AppCompatActivity {
 
-    // Deklarasi Widget
+    // Deklarasi
     private RecyclerView recyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fine_place);
-        // Inisialisasi Widget
-        recyclerView = (RecyclerView) findViewById(R.id.rvListBerita);
+        setContentView(R.layout.activity_find_place);
+        // Inisialisasi
+        recyclerView = (RecyclerView) findViewById(R.id.recycleView);
         // RecyclerView harus pakai Layout manager
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         // Eksekusi method
@@ -44,19 +46,19 @@ public class finePlace extends AppCompatActivity {
             @Override
             public void onResponse(Call<ResponseWisata> call, Response<ResponseWisata> response) {
                 // Pasikan response Sukses
-                if (response.isSuccessful()){
+                if (response.isSuccessful()) {
                     Log.d("response api", response.body().toString());
                     // tampung data response body ke variable
                     List<WisataItem> data_wisata = response.body().getWisata();
                     boolean status = response.body().isStatus();
                     // Kalau response status nya = true
-                    if (status){
+                    if (status) {
                         // Buat Adapter untuk recycler view
-                        AdapterWisata adapter = new AdapterWisata(finePlace.this, data_wisata);
+                        AdapterWisata adapter = new AdapterWisata(FindPlaceActivity.this, data_wisata);
                         recyclerView.setAdapter(adapter);
                     } else {
                         // kalau tidak true
-                        Toast.makeText(finePlace.this, "Tidak ada tempat wisata untuk saat ini", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(FindPlaceActivity.this, "Tidak ada tempat wisata untuk saat ini", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -68,5 +70,4 @@ public class finePlace extends AppCompatActivity {
             }
         });
     }
-
 }
