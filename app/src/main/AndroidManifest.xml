@@ -55,7 +55,7 @@
 
         <activity
             android:name=".view.FindPlaceActivity"
-            android:label="Fine Place"></activity>
+            android:label="Find Place"></activity>
         <activity
             android:name=".view.FavoriteActivity"
             android:label="Favorite"></activity>
